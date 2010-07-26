@@ -49,7 +49,7 @@ S2.UI.Behavior = Class.create(S2.UI.Mixin.Configurable, {
       name = parts.last();
       
       handler = this._observers[name] = this[eventName].bind(this);      
-      element.observe(name.substring(2), handler);
+      element.observe(name.substring(2).toLowerCase(), handler);
     }
   },
   
